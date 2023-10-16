@@ -19,10 +19,10 @@ const HomePage = () => {
 
     return (
         <div>
-            <div className="logo-container">
+            {/* <div className="logo-container">
                 <img className="logo" src="/assets/yl_vertical_logo.svg" alt="YourLine Logo" />
             </div>
-            <hr className="nav-separator" />
+            <hr className="nav-separator" /> */}
 
             <br />
 
