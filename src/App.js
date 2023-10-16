@@ -5,12 +5,13 @@ import SignInPage from './components/pages/SignInPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        {/* <Route path="/signin" element={<SignInPage />} /> */}
-      </Routes>
-    </BrowserRouter>
+    // <BrowserRouter>
+    //   <Routes>
+    //     <Route path="/" element={<HomePage />} />
+    //     {/* <Route path="/signin" element={<SignInPage />} /> */}
+    //   </Routes>
+    // </BrowserRouter>
+    <HomePage />
   );
 }
 
