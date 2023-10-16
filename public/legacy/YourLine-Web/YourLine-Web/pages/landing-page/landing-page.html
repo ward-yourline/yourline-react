@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/sign-in-styles.css">
+
+    <title>YourLine</title>
+</head>
+<style>
+    .nav-separator {
+        opacity: 0.2;
+    }
+</style>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center;">
+        <img style="width: 500px; padding: 0px; margin: 0px;" src="../../assets/yl_vertical_logo.svg" alt="">
+    </div>
+
+    <hr class="nav-separator">
+
+    <br>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+        <div style="flex: 3;"></div>
+        <div style="flex: 2; display: flex; flex-direction: row; gap: 20px">
+            <button onclick="signInTapped()" class="sign-in-btn">Sign in</button>
+            <button onclick="signUpTapped()" class="sign-in-btn">Sign up</button>
+        </div>
+        <div style="flex: 3"></div>
+    </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly; align-items: center;">
+        <div style="flex: 1;"></div>
+        <div style="flex: 2; display: flex; flex-direction: column;">
+            <h3 style="text-align: center;">"Empowering Global Connectivity: YourLine's Seamless Solution"</h3>
+            <p style="text-align: center; font-size: 14pt;">
+                In a world where connections matter more than ever, YourLine simplifies life's complexities. Our
+                revolutionary platform streamlines online experiences for individuals, businesses, and communities. From
+                personal networks to seamless business interactions, YourLine bridges gaps and empowers connections.
+            </p>
+        </div>
+        <div style="flex: 1"></div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    function signInTapped() {
+        window.location = "../signin/signin.html"
+    }
+
+    function signUpTapped() {
+        window.location = "../signup/signup.html"
+    }
+</script>

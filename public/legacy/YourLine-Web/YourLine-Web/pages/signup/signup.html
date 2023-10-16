@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/sign-in-styles.css">
+    <link rel="stylesheet" href="signup.css">
+
+    <script src="../../scripts/helper.js"></script>
+    <script src="../../scripts/networking/user-mutations.js" defer></script>
+    <script src="../../scripts/networking/user-queries.js" defer></script>
+    <script src="../../scripts/networking/webservice.js"></script>
+    <script src="../../scripts/router.js"></script>
+    <script src="../../scripts/constants.js"></script>
+    <script src="signup.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YourLine</title>
+</head>
+
+<body onload="onload()">
+    <div class="login-div">
+
+        <div class="title">
+            <img style="width: 500px; padding: 0px; margin: 0px;" src="../../assets/yl_vertical_logo.svg" alt="">
+        </div>
+
+        <hr class="nav-separator">
+        
+        <h3>Sign up</h3>
+
+        <div class="form">
+            <!-- <div>
+                <select class="account-type-select" id="account-type-select">
+                    <option value="standard">Standard account</option>
+                    <option value="business">Business account</option>
+                </select>
+            </div>
+
+            <hr class="nav-separator"> -->
+            <div class="input-div">
+                <img class="input-images" src="../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input first-name" class="user-input" type="text"
+                    placeholder="Enter first name">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input surname" class="user-input" type="text"
+                    placeholder="Enter surname">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/mail_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input email" type="email" placeholder="Enter email">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/person_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input username" type="text" placeholder="Enter username">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/lock_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input password" class="user-input" type="password"
+                    placeholder="Enter password">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/home_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input address" type="text" placeholder="Enter address">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/home_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input post-code" type="text" placeholder="Enter postcode">
+            </div>
+
+            <div class="input-div">
+                <img class="input-images" src="../../assets/smartphone_FILL0_wght400_GRAD0_opsz48.svg" alt="" />
+                <input class="user-input phone-number" class="user-input" type="number"
+                    placeholder="Enter mobile number">
+            </div>
+
+            <p id="caps-warning">Caps lock is ON.</p>
+
+            <div class="checkbox-div">
+                <input type="checkbox" onclick="showPassword(this)">Show Password
+            </div>
+
+            <button class="sign-in-btn" onclick="signUpTapped()">Sign up</button>
+
+            <p class="alternative-sign-up-separator">OR</p>
+
+            <button class="sign-in-google-btn">
+                <img width="15px" style="margin-bottom: -1px; margin-right: 8px" alt="Google login"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                Sign up with Google
+            </button>
+
+            <div class="sign-up">
+                <a href="../signin/signin.html">Already have an account? Sign in here </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

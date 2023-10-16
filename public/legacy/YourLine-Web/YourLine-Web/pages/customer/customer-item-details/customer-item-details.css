@@ -1,0 +1,85 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.product-details,
+.price-details {
+  flex: 3;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+}
+
+.product-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.price-details {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  gap: 10px;
+}
+
+.price-details button {
+  flex: 1;
+  border: 1px solid black;
+  height: auto;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: left;
+}
+
+.quantity-input {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  border-radius: 10px;
+  border: 0px solid rgba(0, 0, 0, 0.2);
+}
+
+.price-details .submit-button {
+  width: 100%;
+  flex: 2;
+}
+
+/* Custom styles for the select element */
+.custom-select {
+  margin-top: 10px;
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}

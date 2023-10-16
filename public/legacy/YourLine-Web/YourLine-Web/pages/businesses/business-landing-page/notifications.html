@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="./business-sub-pages.css">
+    <link rel="stylesheet" href="../../../styles/text-animation-styles.css">
+    <link rel="stylesheet" href="notifications.css">
+
+    <script src="notifications.js" defer></script>
+
+    <!-- Timeline  -->
+    <link rel="stylesheet" href="../../../libraries/timeline/timeline.css">
+
+    <!-- Networking -->
+    <script src="../../../scripts/networking/webservice.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YourLine</title>
+</head>
+
+<body>
+    <body onload="onload()" style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+            <div class="categories-label" style="color: black; font-size: 30px; font-weight: 600;">Notifications</div>
+        </div>
+
+    <div style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+        <span
+            style="display: flex; flex-direction: row; justify-content: space-between; border-bottom: 1px solid rgba(0, 0, 0, 0.2); padding-bottom: 10px;">
+            <input style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 5px;" type="text"
+                placeholder="Search..">
+        </span>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Subject</th>
+                <th>Priority</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td style="color: tomato;">
+                    <span
+                        style="display: flex; align-items: center; align-content: center; background-color: white; justify-content: start; gap: 10px; width: 100px; align-items: center;">
+                        urgent
+                        <button
+                            style="border: none; justify-content: center; background-color: white;  cursor: pointer;">
+                            <img style="width: 20px; height: 20px;"
+                                src="../../../assets/schedule_FILL0_wght400_GRAD0_opsz48.svg" alt="">
+                        </button>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td style="color: tomato;">urgent</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td style="color: mediumseagreen;">normal</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td style="color: mediumseagreen;">normal</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td style="color: tomato;">urgent</td>
+            </tr>
+        </table>
+    </div>
+
+</body>

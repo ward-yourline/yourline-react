@@ -1,0 +1,172 @@
+  * {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .title1,
+  .title2 {
+    font-size: 64px;
+    font-weight: 600;
+  }
+
+  .title1 {
+    color: #75BCD2;
+  }
+
+  .title2 {
+    color: #3b5e69;
+  }
+
+  .nav-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #3b5e69;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .iframe-frame {
+    height: 100%; /*calc(100vh - 200px);*/
+    /* Set the height to 100% of the viewport height */
+    width: 100%;
+    /* Set the width to 100% of the parent container */
+    overflow: auto;
+    /* Enable scrolling if content exceeds the height */
+    border: none;
+    /* Remove the iframe border */
+    overflow-y: auto;
+  }
+
+  section {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  /* Toasts */
+  .toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .toast.show {
+    opacity: 1;
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    width: 100vw;
+    color: white;
+    background: #3b5e69;
+  }
+
+  li>a {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  li>a:hover {
+    transform: scale(1.25);
+  }
+
+  .title-div {
+    background-color: white;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .title-text {
+    display: flex;
+  }
+
+  .basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px;
+    gap: 5px;
+    width: auto;
+    padding: 0px 20px 0px 20px;
+    background: goldenrod;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .badge {
+    display: none;
+    position: relative;
+    text-align: center;
+    left: -3px;
+    top: -8px;
+    background-color: red;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 50%;
+    font-size: 12px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    width: 10px;
+    height: 18px;
+  }
+
+
+  /* Conditions for smaller screens */
+  @media (max-width: 600px) {
+    .title-div {
+      text-align: center;
+      justify-content: center;
+      display: block;
+    }
+
+    .title-text {
+      display: inline;
+      text-align: center;
+    }
+
+    .signout-button {
+      float: left;
+    }
+  }

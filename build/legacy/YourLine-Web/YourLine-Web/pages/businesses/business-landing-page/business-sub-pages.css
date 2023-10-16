@@ -1,0 +1,81 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    padding: 20px;
+    text-align: left;
+    color: white;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the content */
+article {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+/* Style the footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+#search-bar {
+    position: absolute;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-right: 20px;
+    float: left;
+    width: 400px;
+    height: 32px;
+    text-align: center;
+    margin-left: 20px;
+}
+/* 
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  } */
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.search-table-div {
+    width: 90%;
+    margin-left: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #75BCD2;
+}

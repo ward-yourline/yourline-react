@@ -1,0 +1,77 @@
+.header-div {
+  padding-left: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column-nav {
+  position: fixed;
+  float: left;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+.iframe-frame {
+  margin-left: 250px;
+  display: flex;
+  border: none;
+  height: 100vh;
+  width: calc(100vw - 250px);
+  padding: 0;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#side-menu {
+  padding-top: 0px;
+  margin-top: 10px;
+}
+
+.title-text {
+  display: flex;
+}
+
+/* The navigation menu links */
+#side-menu a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 200;
+  color: #3b5e69;
+}
+
+/* When you mouse over the navigation links, change their color */
+#side-menu a:hover {
+  color: #871111;
+}
+
+/* Style the list inside the menu */
+#side-menu ul {
+  list-style-type: none;
+  padding: 10px 0px 0px 20px;
+  margin: 0px;
+}
+
+.menu-item {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: space-between; 
+  align-items: center; 
+  text-align: center; 
+  padding-bottom: 20px;
+}
+
+.menu-item-separator {
+  padding-right: 20px; color: #3b5e69;
+}
+
+.icon {
+  width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;
+}

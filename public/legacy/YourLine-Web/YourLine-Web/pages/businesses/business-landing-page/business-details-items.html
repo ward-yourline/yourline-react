@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="./business-sub-pages.css">
+    <link rel="stylesheet" href="../../../styles/steps.css">
+    <link rel="stylesheet" href="business-details-items.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../../../scripts/constants.js"></script>
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/networking/webservice.js"></script>
+    <script src="../../../scripts/networking/item-networking.js"></script>
+    <script src="../../../scripts/router.js"></script>
+    <script src="../../../scripts/networking/business-queries.js"></script>
+    <script src="business-details-items.js"></script>
+
+    <title>YourLine</title>
+</head>
+
+<body onload="onload()" style="display: flex; flex-direction: column; padding: 20px;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="title-label" style="color: black; font-size: 30px; font-weight: 600;">Products</div>
+        <h4 class="back-button" style="margin: 0px;" onclick=" window.history.back()">&larr; Back</h4>
+    </div>
+    <div>
+        <br>
+        <div style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+            <table class="products-table">
+                <tr class="header">
+                    <th class="table-type-label" style="width:20%;">Product</th>
+                    <th style="width:40%;">Brief description</th>
+                    <th style="width:10%;">Price</th>
+                    <th style="width:10%;">Status</th>
+                    <th style="width:10%;">Actions</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+    </div>
+</body>
+</html>

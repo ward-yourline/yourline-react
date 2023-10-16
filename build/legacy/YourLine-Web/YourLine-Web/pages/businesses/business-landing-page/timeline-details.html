@@ -1,0 +1,67 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Networking -->
+    <script src="../../../../scripts/networking/webservice.js"></script>
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/router.js"></script>
+    <script src="../../../scripts/constants.js"></script>
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="business-sub-pages.css">
+
+    <!-- Toast -->
+    <script src="../../../../Components/Toast/toast.js" defer></script>
+
+    <title>Store</title>
+</head>
+
+<style>
+    .tappable-button {
+        border: none;
+    }
+
+    .container {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .padding {
+        flex: 1;
+    }
+
+    .sections {
+        display: flex;
+        flex-direction: column;
+        flex: 3;
+    }
+</style>
+
+<body onload="onLoad()" style="display: flex; flex-direction: column; padding: 20px;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="title-label" style="color: black; font-size: 30px; font-weight: 600;">Timeline event</div>
+        <h4 class="back-button" style="margin: 0px;" onclick=" window.history.back()">&larr; Back</h4>
+    </div>
+    <div class="container">
+        <div class="padding"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laudantium nostrum necessitatibus autem
+            aliquid ex dignissimos neque dolorem totam rem beatae blanditiis ut quisquam suscipit nemo cupiditate at,
+            provident eius.</p>
+        <div class="padding"></div>
+    </div>
+    <div style="height: 10rem;"></div>
+</body>
+
+</html>

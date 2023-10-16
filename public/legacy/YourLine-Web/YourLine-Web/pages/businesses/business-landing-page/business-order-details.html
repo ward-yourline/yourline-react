@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/networking/user-queries.js" defer></script>
+    <script src="../../../scripts/networking/webservice.js"></script>
+    <script src="../../../scripts/router.js"></script>
+    <script src="../../../scripts/constants.js"></script>
+    <script src="../../../scripts/networking/business-mutations.js"></script>
+    <script src="../../../scripts/networking/business-queries.js"></script>
+    <script src="../../../scripts/networking/transactions.js"></script>
+    <script src="../../../scripts/networking/item-networking.js"></script>
+    <script src="../../../scripts/user.js"></script>
+    <script src="business-order-details.js" defer></script>
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="../../../styles/item-colors.css">
+    <link rel="stylesheet" href="business-sub-pages.css">
+    <link rel="stylesheet" href="business-order-details.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Orders</title>
+</head>
+
+<body onload="onload()" style="padding: 20px;">
+    <div class="container">
+        <div style="flex: 1;"></div>
+        <div class="product-details">
+            <h2>Order</h2>
+            <h4 class="back-button" style="margin-bottom: 20px;" onclick=" window.history.back()">&larr; Back</h4>
+            <div class="product-image">
+                <img class="item-image" alt="">
+            </div>
+            <h3>Name</h3>
+            <p class="item-name">Order</p>
+            <h3>Description</h3>
+            <p class="item-desc"></p> 
+            <h3>Status</h3>
+            <p class="item-status"></p> 
+            <h3>Customer information</h3>
+            <div class="customer-details">
+                <div class="bordered">
+                    <h5>Name</h5>
+                    <p>John smith</p>
+                    <h5>Email</h5>
+                    <p>j.smith@yl.com</p>
+                    <h5>Address</h5>
+                    <p>42 Mock Street, England</p>
+                    <h5>Payment method</h5>
+                    <p>Paypal</p>
+                </div>
+                <div class="bordered">
+                    <h5>Additional information</h5>
+                    <p>Customer lives in a gated community. Delivery personnel must enter 5403 to enter</p>
+                </div>
+            </div>
+            <div>
+                <h4>Actions</h4>
+                <div style="display: flex; flex-direction: column;">
+                    <button class="submit-button" onclick="didTapDispatchOrderButton()">Order dispatched</button>
+                    <button class="submit-button" onclick="didTapCompleteOrderButton()">Complete order</button>
+                    <button class="destructive-button" onclick="didTapCancelOrderButton()">Cancel order</button>
+                </div>
+                <div style="height: 100px;"></div>
+            </div>
+        </div>
+        <div style="flex: 1;"></div>
+    </div>
+</body>
+
+</html>

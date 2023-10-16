@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="./customer-settings.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/constants.js"></script>
+    <script src="../../../scripts/user.js"></script>
+    <script src="../../../scripts/images.js"></script>
+    <script src="../../../scripts/networking/webservice.js"></script>
+    <script src="../../../scripts/networking/user-queries.js"></script>
+    <script src="../../../scripts/networking/user-mutations.js"></script>
+    <script src="customer-settings.js" defer></script>
+
+    <title>YourLine</title>
+</head>
+
+<body onload="onload()">
+    <div class="container">
+        <div class="padding"></div>
+        <div class="sections" style="margin-top: 40px;">
+            <div>
+                <h2 style="color: #3b5e69; margin: 0px;">Settings</h2>
+            </div>
+            <div class="section">
+                <div
+                    style="display: flex; justify-content: center; max-width: 100%; padding: 40px; background-color: whitesmoke; border-radius: 10px;">
+                    <div id="user_image"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0;">Username</h3>
+                        <div id="username"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0;">Email</h3>
+                        <div id="user_email"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0;">Address</h3>
+                        <div id="address"></div>
+                </div>
+                <div>
+                    <h4 style="margin: 0;">Shipping Address</h3>
+                        <div id="shipping-address">To Do</div>
+                </div>
+                <div>
+                    <h4 style="margin: 0;">Phone number</h3>
+                        <div id="telephone_number"></div>
+                </div>
+                <button onclick="parent.window.location = '../../landing-page/landing-page.html'"
+                    class="submit-button">Sign out</button>
+                <a href="#">Advanced settings</a> <!-- Add deleting an account here -->
+            </div>
+
+            <div class="section">
+                <div>
+                    <h3 style="margin: 0px;">Notifications</h3>
+                </div>
+                <div>
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>
+                                Orders</td>
+                            <td>
+                                <div style="float: right;">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Messages</td>
+                            <td>
+                                <div style="float: right;">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Promotional</td>
+                            <td>
+                                <div style="float: right;">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <div>
+                    <h3 style="margin: 0px;">Other</h3>
+                </div>
+                <a href="../customer-policies/customer-privacy-policy.html">Privacy policy</a>
+                <a href="../customer-policies/terms-and-conditions.html">Terms and conditions</a>
+                <button class="submit-button delete-account-button" style="background-color: tomato;">
+                    Delete my account
+                </button>
+            </div>
+        </div>
+        <div class="padding"></div>
+    </div>
+    <div style="height: 10vh;"></div>
+</body>
+
+</html>

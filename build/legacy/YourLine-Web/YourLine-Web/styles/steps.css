@@ -1,0 +1,78 @@
+:root {
+  --line-border-fill: #46717e;
+  --line-border-empty: #e0e0e0;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 50%
+}
+
+.progress-container::before {
+  content: "";
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  z-index: -1;
+}
+
+.progress {
+  background-color: var(--line-border-fill);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+/* Only show line if there is a subsequent step */
+.progress:not(:last-of-type)::after {
+  content: "";
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: calc((100% - 30px) / (var(--steps) - 1));
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+/* Only show circle if there is a step */
+.circle:first-of-type:not(:last-of-type) {
+  margin-right: auto;
+}
+
+/* Adjust spacing of circles based on number of steps */
+.circle:not(:first-of-type):not(:last-of-type) {
+  margin-right: calc((100% - 30px) / (var(--steps) - 1));
+}

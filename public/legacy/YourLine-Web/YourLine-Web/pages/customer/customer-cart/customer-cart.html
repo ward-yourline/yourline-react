@@ -1,0 +1,61 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="../../../styles/text-animation-styles.css">
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="customer-cart.css">
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/helper-items.js"></script>
+    <script src="../../../scripts/router.js"></script>
+    <script src="../../../scripts/constants.js"></script>
+
+    <script src="../../../scripts/networking/webservice.js"></script>
+    <script src="../../../scripts/networking/user-queries.js"></script>
+    <script src="../../../scripts/networking/cart-queries.js"></script>
+    <script src="../../../scripts/networking/transactions.js"></script>
+    <script src="../../../scripts/networking/business-mutations.js"></script>
+
+
+    <script src="custsomer-cart-ui.js"></script>
+    <script src="customer-cart.js" defer></script>
+
+    <title>Cart</title>
+</head>
+
+<body onload="didLoad()">
+    <div class="container">
+        <div class="padding"></div>
+        <div>
+            <h2 class="empty-label">Empty Cart</h2>
+        </div>
+        <div class="sections">
+            <div>
+                <h2 class="section-header">Your Cart</h2>
+            </div>
+            <div class="items-section">
+            </div>
+        </div>
+        <div class="sections payment">
+            <div>
+                <h2 class="section-header">Payment</h2>
+            </div>
+            <div class="cell bordered summary">
+                <h2 class="total-price-label">Total price</h2>
+                <button style="position: relative; float: right; bottom: 0; right: 0; left: 0; width: 100%;"
+                    class="submit-button payment-button">Continue to checkout</button>
+            </div>
+        </div>
+        <div class="padding"></div>
+    </div>
+</body>
+
+</html>

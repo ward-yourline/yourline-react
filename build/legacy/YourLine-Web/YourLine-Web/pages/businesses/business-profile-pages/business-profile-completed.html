@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="./business-profile.css">
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/router.js" defer></script>
+    <script src="../../../scripts/constants.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>YourLine</title>
+</head>
+
+<style>
+    .completed-container {
+        align-items: center;
+        align-content: center;
+        margin: auto;
+    }
+
+    .success-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        width: 256px;
+    }
+
+    .congrats-paragraph {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 40px;
+        width: 40%;
+    }
+
+    .submit-button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+</style>
+
+<body>
+            <div class="title">
+                <label class="title1">Your</label>
+                <label class="title2">Line</label>
+            </div>
+
+            <div class="nav-separator">
+                <hr>
+            </div>
+
+            <div class="completed-container">
+
+                <img class="success-image" src="../../../assets/tick_circle_blue.svg" alt="">
+
+                <h3 style="text-align: center;">You’ve completed your profile!</h3>
+
+                <p class="congrats-paragraph">
+                    Congratulations. Your business profile for Rossi Ristorante is now complete. Customers can find you
+                    and start making orders
+                </p>
+
+                <input class="submit-button" type="submit" value="Finish">
+            </div>
+
+            <script>
+
+                const submitButton = document.querySelector('.submit-button');
+
+                submitButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    console.log("submit tapped")
+
+                    // Redirect to new view
+                    window.location.href = '../../../pages/businesses/business-landing-page/business-landing-page.html';
+                });
+            </script>
+</body>
+
+</html>

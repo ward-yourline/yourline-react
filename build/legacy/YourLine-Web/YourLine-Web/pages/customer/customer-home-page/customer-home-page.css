@@ -1,0 +1,174 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.search-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  height: 72px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 0) 70%
+  );
+}
+
+.search-bar {
+  width: 300px;
+  height: 30px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.container {
+  display: flex;
+}
+
+.items-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px;
+  flex-grow: 3;
+  width: 100%; /* Add this line to occupy all available width */
+  box-sizing: border-box; /* Add this line to include padding in the width calculation */
+}
+
+.flex-item {
+  flex: 1 1 1; /* Adjust the flex-basis to your desired width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15rem;
+  height: 25rem;
+  align-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flex-item:hover {
+  transform: scale(1.05); /* Adjust the scale value as desired */
+}
+
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+
+.item-wrapper img {
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.item-wrapper div {
+  padding: 10px;
+}
+
+.buy-button {
+  width: 80%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.limit-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: 3em;
+  width: 100%;
+}
+
+.basket {
+  /* position: fixed; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: auto;
+  padding: 0px 10px 0px 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  right: 10px;
+  border-radius: 20px;
+  background: goldenrod;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.promotional {
+  display: flex; 
+  flex-direction: row; 
+  margin: 20px; 
+  justify-content: center; 
+  gap: 20px
+}
+
+.basket:hover {
+  transform: scale(1.25); /* Adjust the scale value as desired */
+}
+
+.basketAnimation {
+  animation-name: basketAnimation;
+  animation-duration: 200ms;
+  animation-iteration-count: 2;
+}
+
+@keyframes basketAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px) {
+  .items-flex-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .search-bar {
+    width: calc(300px - 20vw);
+  }
+
+  .flex-item {
+    flex: 3 3 200px;
+  }
+
+  .promotional {
+    flex-direction: column;
+  }
+}

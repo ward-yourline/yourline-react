@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table tr {
+    cursor: pointer;
+}
+
+.product-image {
+    width: 100px;
+    height: 100px;
+}
+
+.product-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}

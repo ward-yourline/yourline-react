@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../styles/button-styles.css">
+  <link rel="stylesheet" href="../../../styles/text-animation-styles.css">
+  <link rel="stylesheet" href="./customer-landing-page.css">
+
+  <script src="../../../scripts/helper.js"></script>
+  <script src="../../../scripts/networking/webservice.js"></script>
+  <script src="../../../scripts/networking/item-networking.js"></script>
+  <script src="customer-landing.js" defer></script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>YourLine</title>
+</head>
+
+<body onload="didLoad()">
+  <div id="toast" class="toast">This is a toast</div>
+
+  <div class="container">
+    <header>
+      <!-- <div class="title-div">
+        <div class="title-text">
+          <img style="max-width: 500px; max-height: 100px; padding: 0px; margin: 0px;" src="../../../assets/yl_horizontal_logo.svg" alt="">
+        </div>
+        <div class="animated-text-container" style="max-width: 350px;">
+          <div class="animated-text">
+            <span class="static-text">Your </span>
+            <div class="message">
+              <div class="word1">rules</div>
+              <div class="word2">way</div>
+              <div class="word3">line</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../customer-home-page/customer-home-page.html?type=home" target="iframe_main">Home</a></li>
+          <li><a href="../customer-store/customer-store.html?type=products" target="iframe_main">Store</a></li>
+          <!-- <li><a href="../customer-settings/customer-settings.html" target="iframe_main">Settings</a></li> -->
+          <li>
+            <a href="../customer-cart/customer-cart.html" target="iframe_main">
+              Cart
+              <div class="badge">
+                <labe>2</label>
+              </div>
+            </a>
+            <!-- <div class="basket" style="display: flex; flex-direction: row; align-items: center; gap: 10px; width: 1fr;">
+              <img style="width: 32px; height: 52px;" src="../../assets/shopping_basket_FILL1_wght400_GRAD0_opsz48.svg"
+                alt="">
+              <label style="padding-top: 4px; color: white;" for="">2</label>
+            </div> -->
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section>
+      <iframe class="iframe-frame" name="iframe_main" src="../customer-home-page/customer-home-page.html?type=home"></iframe>
+    </section>
+    <footer>
+      <div>
+        <div style="display: flex; gap: 10px;">
+          <a href="https://www.facebook.com/gumtree" rel="noopener noreferrer" target="_blank"
+            class="css-1ol1l57 ev9smhr0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M24 12c0-6.628-5.372-12-12-12S0 5.372 0 12s5.372 12 12 12c.07 0 .14 0 .21-.005v-9.337H9.634v-3.005h2.578V9.441c0-2.564 1.566-3.961 3.853-3.961 1.097 0 2.04.08 2.311.117v2.681H16.8c-1.242 0-1.486.59-1.486 1.458v1.912h2.977l-.39 3.005h-2.587v8.883C20.33 22.096 24 17.48 24 12z"
+                fill="#fff"></path>
+            </svg><span hidden="">Facebook</span></a><a href="https://www.instagram.com/gumtreeuk/"
+            rel="noopener noreferrer" target="_blank" class="css-1ol1l57 ev9smhr0"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.297 12a2.297 2.297 0 1 1-4.594 0 2.297 2.297 0 0 1 4.594 0z" fill="#fff"></path>
+              <path
+                d="M17.372 7.936c-.11-.299-.287-.57-.516-.792a2.133 2.133 0 0 0-.792-.516c-.243-.094-.608-.206-1.28-.237-.726-.033-.944-.04-2.784-.04-1.84 0-2.058.007-2.784.04-.672.03-1.037.143-1.28.237-.3.11-.57.287-.792.516a2.136 2.136 0 0 0-.516.792c-.094.243-.206.608-.237 1.28-.033.726-.04.944-.04 2.784 0 1.84.007 2.058.04 2.785.03.671.143 1.036.237 1.28.11.298.287.57.516.791.222.23.493.405.792.516.243.094.608.207 1.28.237.726.033.944.04 2.784.04 1.84 0 2.058-.007 2.784-.04.672-.03 1.037-.143 1.28-.237a2.282 2.282 0 0 0 1.308-1.308c.094-.243.206-.607.237-1.28.033-.726.04-.944.04-2.784 0-1.84-.007-2.058-.04-2.784-.03-.672-.143-1.037-.237-1.28zM12 15.538a3.538 3.538 0 1 1 0-7.076 3.538 3.538 0 0 1 0 7.076zm3.678-6.39a.827.827 0 1 1 0-1.653.827.827 0 0 1 0 1.654z"
+                fill="#fff"></path>
+              <path
+                d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm6.85 14.84c-.034.734-.15 1.235-.321 1.674a3.524 3.524 0 0 1-2.015 2.015c-.439.17-.94.287-1.673.32-.735.034-.97.042-2.84.042-1.872 0-2.107-.008-2.842-.042-.733-.033-1.234-.15-1.672-.32a3.375 3.375 0 0 1-1.221-.795 3.377 3.377 0 0 1-.795-1.22c-.17-.439-.287-.94-.32-1.673-.034-.735-.042-.97-.042-2.841 0-1.871.008-2.106.042-2.84.033-.734.15-1.235.32-1.674.173-.46.444-.876.795-1.22.344-.35.76-.622 1.22-.795.439-.17.94-.287 1.673-.32.735-.034.97-.042 2.841-.042 1.871 0 2.106.008 2.84.042.734.033 1.235.15 1.674.32.46.173.876.444 1.22.795.35.344.622.76.795 1.22.17.439.287.94.32 1.673.034.735.042.97.042 2.841 0 1.871-.008 2.106-.042 2.84z"
+                fill="#fff"></path>
+            </svg><span hidden="">Instagram</span></a><a href="https://www.tiktok.com/@gumtreeuk"
+            rel="noopener noreferrer" target="_blank" class="css-1ol1l57 ev9smhr0"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm6.02 9.182v1.624a5.656 5.656 0 0 1-3.47-1.179l.012 5.002a4.189 4.189 0 0 1-1.256 2.98 4.277 4.277 0 0 1-3.035 1.243 4.291 4.291 0 0 1-3.034-1.242 4.192 4.192 0 0 1-1.249-3.266 4.197 4.197 0 0 1 1.059-2.532 4.29 4.29 0 0 1 3.224-1.442c.218 0 .434.016.645.048v2.271a2.027 2.027 0 0 0-2.668 1.952c.01.725.407 1.358.99 1.707a2.017 2.017 0 0 0 1.678.185 2.025 2.025 0 0 0 1.392-1.922l.002-3.349V5.148h2.238a3.46 3.46 0 0 0 3.466 3.431h.006v.603z"
+                fill="#fff"></path>
+            </svg><span hidden="">Tiktok</span></a><a href="https://twitter.com/Gumtree" rel="noopener noreferrer"
+            target="_blank" class="css-1ol1l57 ev9smhr0"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm5.48 9.356c.004.118.007.237.007.356 0 3.64-2.77 7.837-7.837 7.837a7.796 7.796 0 0 1-4.222-1.237 5.526 5.526 0 0 0 4.078-1.141 2.757 2.757 0 0 1-2.573-1.913 2.743 2.743 0 0 0 1.244-.047 2.755 2.755 0 0 1-2.21-2.7v-.035c.372.206.796.33 1.248.344a2.752 2.752 0 0 1-.852-3.677 7.82 7.82 0 0 0 5.677 2.878 2.755 2.755 0 0 1 4.694-2.512 5.525 5.525 0 0 0 1.748-.669 2.765 2.765 0 0 1-1.21 1.524 5.494 5.494 0 0 0 1.58-.434 5.599 5.599 0 0 1-1.373 1.426z"
+                fill="#fff"></path>
+            </svg><span hidden="">Twitter</span></a><a href="https://www.youtube.com/user/GumtreeClassifieds"
+            rel="noopener noreferrer" target="_blank" class="css-1ol1l57 ev9smhr0"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.505 14.248L14.41 12l-3.904-2.248v4.496z" fill="#fff"></path>
+              <path
+                d="M12 0C5.374 0 0 5.374 0 12s5.374 12 12 12 12-5.374 12-12S18.626 0 12 0zm7.498 12.012s0 2.434-.309 3.607a1.88 1.88 0 0 1-1.321 1.322c-1.174.309-5.868.309-5.868.309s-4.682 0-5.868-.321a1.88 1.88 0 0 1-1.321-1.322C4.5 14.446 4.5 12 4.5 12s0-2.433.31-3.607a1.917 1.917 0 0 1 1.321-1.334C7.306 6.75 12 6.75 12 6.75s4.694 0 5.868.321a1.88 1.88 0 0 1 1.322 1.322c.32 1.174.308 3.62.308 3.62z"
+                fill="#fff"></path>
+            </svg><span hidden="">Youtube</span></a><a href="https://www.pinterest.co.uk/gumtreeuk/"
+            rel="noopener noreferrer" target="_blank" class="css-1ol1l57 ev9smhr0"><svg width="24" height="24"
+              viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.029.642C5.604.642.384 5.823.384 12.257s5.22 11.616 11.645 11.616c6.424 0 11.587-5.182 11.587-11.616 0-6.434-5.163-11.615-11.587-11.615zm.917 14.747c-.86-.057-1.204-.512-1.893-.911-.344 1.936-.803 3.758-2.122 4.726-.401-2.904.574-5.068 1.033-7.402-.803-1.31.114-4.043 1.778-3.36 2.065.797-1.778 5.01.803 5.523 2.753.57 3.843-4.726 2.18-6.434-2.467-2.448-7.113-.057-6.54 3.473.173.855 1.033 1.14.402 2.335-1.606-.341-2.065-1.594-2.008-3.189.115-2.676 2.41-4.555 4.761-4.84 2.926-.34 5.68 1.082 6.023 3.815.46 3.132-1.32 6.492-4.417 6.264z"
+                fill="#fff"></path>
+            </svg><span hidden="">Pinterest</span></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

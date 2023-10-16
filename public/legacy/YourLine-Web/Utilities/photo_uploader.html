@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+    <style>
+        #progressBar {
+            width: 100%;
+            height: 20px;
+            background-color: #f1f1f1;
+        }
+
+        #progress {
+            width: 0%;
+            height: 100%;
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <input type="file" id="imageFile">
+    <button onclick="uploadImage(event)">Upload</button>
+    <div id="progressBar">
+        <div id="progress"></div>
+    </div>
+</body>
+<script>
+    function uploadImage(event) {
+        event.preventDefault()
+        var fileInput = document.getElementById("imageFile");
+        var file = fileInput.files[0];
+
+        var formData = new FormData();
+        formData.append("file", file); // Change the key to "file"
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:8081/upload");
+
+        // Progress event listener to update the progress bar
+        xhr.upload.addEventListener("progress", function(event) {
+            if (event.lengthComputable) {
+                var progress = (event.loaded / event.total) * 100;
+                document.getElementById("progress").style.width = progress + "%";
+            }
+        });
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    var response = xhr.responseText;
+                    alert("Upload completed: " + response);
+                } else {
+                    alert("Upload failed");
+                }
+            }
+        };
+
+        xhr.send(formData);
+    }
+</script>
+</html>

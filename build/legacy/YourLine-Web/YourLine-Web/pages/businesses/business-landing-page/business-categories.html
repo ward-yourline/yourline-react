@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="../../../scripts/helper.js"></script>
+    <script src="../../../scripts/networking/user-queries.js" defer></script>
+    <script src="../../../scripts/networking/webservice.js"></script>
+    <script src="../../../scripts/router.js"></script>
+    <script src="../../../scripts/constants.js"></script>
+    <script src="../../../scripts/networking/business-mutations.js" defer></script>
+    <script src="../../../scripts/networking/business-queries.js"></script>
+
+    <script src="./business-categories.js" defer></script>
+    <script src="../../../scripts/user.js"></script>
+
+    <link rel="stylesheet" href="../../../styles/shared-styles.css">
+    <link rel="stylesheet" href="../../../styles/button-styles.css">
+    <link rel="stylesheet" href="./business-sub-pages.css">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Business</title>
+</head>
+
+<style>
+    .input-box {
+        height: 30px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table tr:last-child td {
+        border-bottom: none;
+    }
+
+    table tr {
+        cursor: pointer;
+    }
+</style>
+
+<body onload="onLoad()" style="display: flex; flex-direction: column; gap: 20px; padding: 20px;">
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+        <div class="categories-label" style="color: black; font-size: 30px; font-weight: 600;">Product Categories</div>
+        <h4 class="back-button" style="margin: 0px;" onclick=" window.history.back()">&larr; Back</h4>
+    </div>
+    <div>
+        <div>
+            <br>
+            <div style="border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 10px; padding: 20px;">
+                <table id="table-categories">
+                    <tr>
+                        <th style="width:20%;">Category</th>
+                        <th style="width:70%;">Description</th>
+                        <th style="width:10%;">Actions</th>
+                    </tr>
+                </table>
+            </div>
+            <button class="submit-button" onclick="showAddCategoryView(true)">
+                Add category
+            </button>
+            <br>
+        </div>
+
+        <dialog class="edit-category-name-dialogue">
+            <p>Enter a new category name</p>
+            <form method="dialog">
+                <h2 style="color: red;">This is for demo purposes only. Still not functioning</h2>
+                <div>
+                    <input type="text" style="width: 100%;" placeholder="Enter a new category name">
+                </div>
+                <br>
+                <div>
+                    <button value="cancel" formmethod="dialog">Cancel</button>
+                    <button id="confirmBtn" onclick="updateCategoryNameForCategory()" value="default">Submit</button>
+                </div>
+            </form>
+        </dialog>
+
+        <!-- Add category component -->
+        <div class="add-category-parent-div" style="
+            display: none;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.1);
+        ">
+            <div style="flex: 2;"></div>
+            <div class="add-category-div bordered" style="
+                margin-top: 40px;
+                display: flex;
+                background-color: white;
+                flex-direction: column;
+                border-radius: 10px;
+                flex: 1;
+                padding: 10px;
+                row-gap: 10px;
+                height: 200px;
+                ">
+                <h4 class="back-button" style="margin: 0px;" onclick="showAddCategoryView(false)">&larr; Back</h4>
+                <input class="name-input chocablock input-box" id="category-input" placeholder="Enter category name"
+                    type="text" required>
+                <input class="description-input input-box" placeholder="Enter category description" type="text"
+                    required>
+                <button class="submit-button" type="submit" onclick="addCategoryTapped()">Add
+                    category</button>
+            </div>
+            <div style="flex: 2;"></div>
+        </div>
+</body>
+
+</html>
