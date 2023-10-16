@@ -26,6 +26,8 @@ const HomePage = () => {
 
             <br />
 
+            <h1>Hello</h1>
+
             {/* <div className="section-container">
                 <Padding flex={3} />
                 <div className="button-container">
