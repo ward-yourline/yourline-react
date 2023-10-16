@@ -1,34 +1,32 @@
 import React from 'react';
 import './HomePage.css'; // Import your styles
-// import Padding from '../layout/Padding';
-// import TextLabel, { TextLabelType, TextLabelAlignment } from '../text/TextLabel';
-// import { Link } from 'react-router-dom'; // Import Link from React Router
-// import YLLegacyPath from '../helper/YLLegacy';
+import Padding from '../layout/Padding';
+import TextLabel, { TextLabelType, TextLabelAlignment } from '../text/TextLabel';
+import { Link } from 'react-router-dom'; // Import Link from React Router
+import YLLegacyPath from '../helper/YLLegacy';
 
 const HomePage = () => {
 
     const signInTapped = () => {
         // Implement your navigation logic here, e.g., using React Router.
-        // window.location.href = YLLegacyPath("pages/signin/signin.html")
+        window.location.href = YLLegacyPath("pages/signin/signin.html")
     };
 
     const signUpTapped = () => {
         // Implement your navigation logic here, e.g., using React Router.
-        // window.location.href = YLLegacyPath("pages/signup/signup.html")
+        window.location.href = YLLegacyPath("pages/signup/signup.html")
     };
 
     return (
         <div>
-            {/* <div className="logo-container">
+            <div className="logo-container">
                 <img className="logo" src="/assets/yl_vertical_logo.svg" alt="YourLine Logo" />
             </div>
-            <hr className="nav-separator" /> */}
+            <hr className="nav-separator" />
 
             <br />
 
-            <h1>Hello</h1>
-
-            {/* <div className="section-container">
+            <div className="section-container">
                 <Padding flex={3} />
                 <div className="button-container">
                     <button onClick={signInTapped} className="sign-in-btn">
@@ -49,7 +47,7 @@ const HomePage = () => {
                         From persoTextLabelnal networks to seamless business interactions, YourLine bridges gaps and empowers connections." />
                 </div>
                 <Padding flex={1} />
-            </div> */}
+            </div>
         </div>
     );
 };
