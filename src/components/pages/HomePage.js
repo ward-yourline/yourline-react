@@ -26,7 +26,7 @@ const HomePage = () => {
 
             <br />
 
-            <div className="section-container">
+            {/* <div className="section-container">
                 <Padding flex={3} />
                 <div className="button-container">
                     <button onClick={signInTapped} className="sign-in-btn">
@@ -47,7 +47,7 @@ const HomePage = () => {
                         From persoTextLabelnal networks to seamless business interactions, YourLine bridges gaps and empowers connections." />
                 </div>
                 <Padding flex={1} />
-            </div>
+            </div> */}
         </div>
     );
 };
