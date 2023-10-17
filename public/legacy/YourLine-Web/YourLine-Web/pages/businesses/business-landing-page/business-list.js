@@ -12,11 +12,12 @@ function reloadTableWithBusinesses(businesses) {
         const row = document.createElement('tr')
 
         const itemField = document.createElement('td')
-        const timeField = document.createElement('td')
-        const statusField = document.createElement('td')
+        const dateField = document.createElement('td')
+
+        dateField.style.textAlign = 'right'
 
         itemField.innerHTML = `<p style="font-weight: 600">${business.name}</p>`
-        timeField.textContent = formatISODateTime(business.createdDate)
+        dateField.textContent = formatISODateTime(business.createdDate)
         // let statusClass = ""
         // switch (business.transactionStatus) {
         //     case "incomplete":
@@ -35,8 +36,7 @@ function reloadTableWithBusinesses(businesses) {
         // statusField.innerHTML = `<p class="${statusClass}">${business.transactionStatus}</p>`
 
         row.appendChild(itemField)
-        row.appendChild(timeField)
-        row.appendChild(statusField)
+        row.appendChild(dateField)
 
         table.appendChild(row)
 
