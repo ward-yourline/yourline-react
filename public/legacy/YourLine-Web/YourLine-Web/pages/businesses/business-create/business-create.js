@@ -4,7 +4,12 @@ const addressID = "business_address"
 const emailID = "business_email"
 const phoneID = "phone_number"
 
+let isNewImage = false
+let imageURL = null
+
 function initialise() {
+
+    enableSaveButton(false)
 
     createFields()
 
@@ -69,7 +74,7 @@ function uploadImage() {
 function createFields() {
     let cells = document.querySelector('.cells')
 
-    imageField = createImageField(businessImageID, "Company logo", "../../../assets/service_placeholder.jpeg")
+    imageField = createImageField(businessImageID, "Company logo", "../../../assets/product_placeholder.jpeg")
     nameField = createTextField(nameID, "Business name", "Enter a name")
     addressField = createTextField(addressID, "Business address", "Enter an address")
     email = createTextField(emailID, "Business email", "Enter an email")
@@ -179,25 +184,57 @@ function createImageField(id, name, imageURL) {
 }
 
 function enableSaveButton(enabled) {
-    // TODO
+    let saveButton = document.querySelector('.save-button')
+
+    console.log(enabled ? "enabled" : "disabled")
+
+    if (enabled) {
+        saveButton.disabled = false
+        saveButton.style.backgroundColor = '3b5e69'
+        saveButton.style.opacity = 1.0
+    } else {
+        saveButton.disabled = true
+        saveButton.style.backgroundColor = 'gray'
+        saveButton.style.opacity = 0.3
+    }
 }
 
 function save() {
     const userID = localStorage.getItem("user_id")
-    const name = document.querySelector(`#${nameID}`).value
-    const address = document.querySelector(`#${addressID}`).value
-    const email = document.querySelector(`#${emailID}`).value
-    const phoneNumber = document.querySelector(`#${phoneID}`).value
+    const name = document.querySelector(`#${nameID}`).value.trim()
+    const address = document.querySelector(`#${addressID}`).value.trim()
+    const email = document.querySelector(`#${emailID}`).value.trim()
+    const phoneNumber = document.querySelector(`#${phoneID}`).value.trim()
 
-    console.log(userID, name, address, phoneNumber)
+    console.log(userID, name, address, phoneNumber, email, imageURL)
 
-    createBusiness(userID, name, address, phoneNumber)
+    if (userID.length == 0 || name.length == 0) {
+        alert("A mandatory field is missing")
+        return
+    }
+
+    if (isNewImage) {
+        uploadImage()
+            .then(logo => {
+                // !!! Broken: ImageURL should logo !!!
+                createBusiness(userID, name, address, phoneNumber, email, imageURL) 
+                    .then(res => {
+                        showToast("Service updated", document.querySelector("body"));
+                    })
+            })
+    } else {
+        createBusiness(userID, name, address, phoneNumber, email, imageURL) 
+            .then(res => {
+                showToast("Service updated", document.querySelector("body"));
+            })
+    }
 }
 
 function finish() {
-
+    window.history.back()
 }
 
 function deleteBusiness() {
-
+    // TODO
+    //  deleteBusiness(id) 
 }

@@ -55,7 +55,7 @@ function setupUIWithBusiness(business) {
     console.log("company logo", business.companyLogo)
     companyImage.style.backgroundImage = `url(${business.companyLogo})`
     nameLabel.textContent = business.name
-    emailLabel.textContent = "TODO"
+    emailLabel.textContent = business.email
     addressLabel.textContent = business.address
     phoneLabel.textContent = business.phoneNumber
 }

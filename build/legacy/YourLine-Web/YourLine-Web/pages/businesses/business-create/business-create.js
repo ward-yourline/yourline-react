@@ -4,6 +4,8 @@ const addressID = "business_address"
 const emailID = "business_email"
 const phoneID = "phone_number"
 
+let isNewImage = false
+
 function initialise() {
 
     createFields()
@@ -69,7 +71,7 @@ function uploadImage() {
 function createFields() {
     let cells = document.querySelector('.cells')
 
-    imageField = createImageField(businessImageID, "Company logo", "../../../assets/service_placeholder.jpeg")
+    imageField = createImageField(businessImageID, "Company logo", "../../../assets/product_placeholder.jpeg")
     nameField = createTextField(nameID, "Business name", "Enter a name")
     addressField = createTextField(addressID, "Business address", "Enter an address")
     email = createTextField(emailID, "Business email", "Enter an email")
@@ -184,18 +186,31 @@ function enableSaveButton(enabled) {
 
 function save() {
     const userID = localStorage.getItem("user_id")
-    const name = document.querySelector(`#${nameID}`).value
-    const address = document.querySelector(`#${addressID}`).value
-    const email = document.querySelector(`#${emailID}`).value
-    const phoneNumber = document.querySelector(`#${phoneID}`).value
+    const name = document.querySelector(`#${nameID}`).value.trim()
+    const address = document.querySelector(`#${addressID}`).value.trim()
+    const email = document.querySelector(`#${emailID}`).value.trim()
+    const phoneNumber = document.querySelector(`#${phoneID}`).value.trim()
 
     console.log(userID, name, address, phoneNumber)
 
-    createBusiness(userID, name, address, phoneNumber)
+    if (isNewImage) {
+        uploadImage()
+            .then(logo => {
+                createBusiness(userID, name, address, phoneNumber, email, logo)
+                    .then(res => {
+
+                    })
+            })
+    } else {
+        createBusiness(userID, name, address, phoneNumber, email)
+            .then(res => {
+
+            })
+    }
 }
 
 function finish() {
-
+    window.history.back()
 }
 
 function deleteBusiness() {
