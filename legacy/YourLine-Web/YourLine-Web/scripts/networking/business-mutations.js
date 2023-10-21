@@ -55,10 +55,10 @@ mutation deleteBusiness($id: ID!) {
 
 // TODO: Send token as part of the headers
 
-function createBusiness(userID, name, address, phoneNumber) {
+function createBusiness(userID, name, address, phoneNumber, email, companyLogo) {
     console.log("create business called")
 
-    let input = { userID, name, address, phoneNumber };
+    let input = { userID, name, address, phoneNumber, email, companyLogo };
 
     return queryFetch(createBusinessMutation, { input })
         .then(data => {

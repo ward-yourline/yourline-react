@@ -11,6 +11,7 @@ let fetchBusinessesForUserIDQuery = `
       categoryIDS
       companyLogo
       createdDate
+      email
     }
   }`
 function fetchBusinessesForUserID(id) {
@@ -51,6 +52,7 @@ query FetchBusinessForBusinessID($id: ID!) {
       sectors
       industries
       companyLogo
+      email
     }
   }`
 
