@@ -1,4 +1,4 @@
-const graphQLURL = 'http://localhost:8080/query'
+const graphQLURL = 'http://yourline.duckdns.org/query'
 
 // Functions
 function queryFetch(query, variables) {

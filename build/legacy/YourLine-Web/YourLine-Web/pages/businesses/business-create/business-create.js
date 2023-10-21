@@ -5,8 +5,11 @@ const emailID = "business_email"
 const phoneID = "phone_number"
 
 let isNewImage = false
+let imageURL = null
 
 function initialise() {
+
+    enableSaveButton(false)
 
     createFields()
 
@@ -181,7 +184,19 @@ function createImageField(id, name, imageURL) {
 }
 
 function enableSaveButton(enabled) {
-    // TODO
+    let saveButton = document.querySelector('.save-button')
+
+    console.log(enabled ? "enabled" : "disabled")
+
+    if (enabled) {
+        saveButton.disabled = false
+        saveButton.style.backgroundColor = '3b5e69'
+        saveButton.style.opacity = 1.0
+    } else {
+        saveButton.disabled = true
+        saveButton.style.backgroundColor = 'gray'
+        saveButton.style.opacity = 0.3
+    }
 }
 
 function save() {
@@ -191,20 +206,26 @@ function save() {
     const email = document.querySelector(`#${emailID}`).value.trim()
     const phoneNumber = document.querySelector(`#${phoneID}`).value.trim()
 
-    console.log(userID, name, address, phoneNumber)
+    console.log(userID, name, address, phoneNumber, email, imageURL)
+
+    if (userID.length == 0 || name.length == 0) {
+        alert("A mandatory field is missing")
+        return
+    }
 
     if (isNewImage) {
         uploadImage()
             .then(logo => {
-                createBusiness(userID, name, address, phoneNumber, email, logo)
+                // !!! Broken: ImageURL should logo !!!
+                createBusiness(userID, name, address, phoneNumber, email, imageURL) 
                     .then(res => {
-
+                        showToast("Service updated", document.querySelector("body"));
                     })
             })
     } else {
-        createBusiness(userID, name, address, phoneNumber, email)
+        createBusiness(userID, name, address, phoneNumber, email, imageURL) 
             .then(res => {
-
+                showToast("Service updated", document.querySelector("body"));
             })
     }
 }
@@ -214,5 +235,6 @@ function finish() {
 }
 
 function deleteBusiness() {
-
+    // TODO
+    //  deleteBusiness(id) 
 }
