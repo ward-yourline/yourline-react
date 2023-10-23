@@ -1,4 +1,3 @@
-const graphQLURL = 'http://yourline.duckdns.org/query'
 const graphQLURL = 'http://yourline-server.duckdns.org/query'
 
 // Functions
