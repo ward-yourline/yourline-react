@@ -81,9 +81,4 @@ function signUpTapped() {
     console.log(firstName, surname, username, password, address, number)
 
     signUp(email, username, password, accountType, firstName, surname, password, address, postCode, number)
-        .then(accountType => {
-            if (accountType == kBusinessAccount) {
-                openBusiness
-            }
-        })
 }
