@@ -42,16 +42,7 @@ function signUp(email, username, password, accountType, firstName, surname, pass
       localStorage.setItem(kAccessTokenLocal, accessToken);
       localStorage.setItem(kRefreshTokenLocal, refreshToken);
 
-      let payload = parseToken(accessToken)
-      const accountType = payload[kAccountType]
-      if (accountType === kBusinessAccount) {
-        console.log("Business account load");
-        openBusinessProfileSetupPage()
-      }
-
-      if (accountType === kStandardAccount) {
-        openCustomerLandingPage();
-      }
+      openBusinessLandingPage()
     })
     .catch(error => {
       console.log("Error occurred during sign in:", error);

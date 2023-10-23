@@ -3,7 +3,7 @@ function uploadImageFromForm(form) {
     return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
 
-        xhr.open("POST", "http://yourline-images.duckdns.org:81/upload");
+        xhr.open("POST", "https://yourline-images.duckdns.org:81/upload");
 
         xhr.upload.addEventListener("progress", event => {
             if (event.lengthComputable) {
@@ -17,7 +17,7 @@ function uploadImageFromForm(form) {
                 if (xhr.status === 200) {
                     console.log(xhr.response)
                     const response = xhr.responseText
-                    const url = "http://yourline-images.duckdns.org:81/image/" + response;
+                    const url = "https://yourline-images.duckdns.org:81/image/" + response;
                     resolve(url);
                 } else {
                     reject(new Error("Upload failed"));
