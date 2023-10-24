@@ -34,11 +34,15 @@ function getUserCurrency() {
     let currencyCode;
   
     // Handle special cases where language and currency codes differ
-    if (countryCode === "GB") {
-      currencyCode = "GBP";
-    } else {
-      currencyCode = countryCode;
+
+    switch (countryCode) {
+        case "GB":
+            return "GBP"
+        case "US":
+            return "USD"
     }
+
+    currencyCode = countryCode;
   
     return currencyCode;
   }
