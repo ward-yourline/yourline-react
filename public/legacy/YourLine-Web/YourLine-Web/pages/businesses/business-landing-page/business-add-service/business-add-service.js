@@ -3,7 +3,7 @@ let categoryID = null
 let parentID = null
 let editState = false
 let item = null
-let imageURL = "https://yourline-images.duckdns.org:81/image/62a59176-5846-45d0-b14c-be896f5a90df"
+let imageURL = "https://yourline-images.duckdns.org/image/62a59176-5846-45d0-b14c-be896f5a90df"
 let isNewImage = false
 let businessID = null
 
