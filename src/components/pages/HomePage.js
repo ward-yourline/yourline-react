@@ -63,6 +63,9 @@ const HomePage = () => {
                 <p>
                     If you have any queries, or would like to report any bugs, send an email <a href="mailto:ward.yourline@gmail.com?subject = Feedback">here</a>
                 </p>
+                <br></br>
+                <p>Disclaimer</p>
+                <p>This service is provided as is. Please use it responsibly. We do not tolerate voilence, abuse, racism, sexism, discrimination or any amoral behaviour or treatment of any sort towards others. Our aim is to bring people together and improve life.</p>
             </div>
         </div>
     );
