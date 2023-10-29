@@ -87,7 +87,7 @@
     opacity: 1;
   }
 
-  footer {
+  /* footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +99,7 @@
     width: 100vw;
     color: white;
     background: #3b5e69;
-  }
+  } */
 
   li>a {
     transition: transform 0.3s ease-in-out;
