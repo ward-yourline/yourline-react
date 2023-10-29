@@ -1,0 +1,21 @@
+body {
+  margin: 20px;
+}
+
+.cell {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.cell:hover {
+  transform: scale(1.05); /* Adjust the scale value as desired */
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cell {
+  cursor: pointer;
+}
