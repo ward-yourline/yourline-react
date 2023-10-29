@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="../../../styles/shared-styles.css">
+  <link rel="stylesheet" href="../../../styles/button-styles.css">
   <link rel="stylesheet" href="./business-landing-page.css">
 
   <meta charset="UTF-8">
@@ -18,8 +19,8 @@
 
 <body style="padding: 0px; margin: 0px;">
   <div>
-    <div>
-      <div class="column-nav">
+    <div class="column-nav" style="display: flex; flex-direction: column; justify-content: space-between; gap: 10px;">
+      <div>
         <div
           style="border: solid rgba(0, 0, 0, 0.1); border-width: 0px 0px 0.5px 0px; padding: 10px; display: flex; flex-direction: row; align-items: center; gap: 5px;">
           <div>
@@ -30,49 +31,52 @@
           </div>
           <!-- <label style="font-size: 16px; font-weight: 400; text-align: center;">Yourline</label> -->
         </div>
+        <h4 style="text-align: center;">BETA</h4>
         <nav>
           <div id="side-menu">
             <ul>
               <div class="menu-item">
                 <li>
                   <a href="./business-home-page.html" target="iframe_main_business">
-                    <img src="../../../assets/dashboard_FILL0_wght400_GRAD0_opsz48.svg" alt="Dashboard" class="icon"> Dashboard
+                    <img src="../../../assets/dashboard_FILL0_wght400_GRAD0_opsz48.svg" alt="Dashboard" class="icon">
+                    Dashboard
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
               </div>
-              <div class="menu-item">
+              <!-- <div class="menu-item">
                 <li>
                   <a href="../../customer/customer-landing-page/customer-landing-page.html" target="iframe_main_business">
                     <img src="../../../assets/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt="Business" class="icon"> Shopping
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
-              </div>
+              </div> -->
               <div class="menu-item">
                 <li>
-                  <a href="./business-list.html" target="iframe_main_business">
-                    <img src="../../../assets/work_FILL0_wght400_GRAD0_opsz48.svg" alt="Business" class="icon"> Business
+                  <a href="./modules.html" target="iframe_main_business">
+                    <img src="../../../assets/apps_FILL0_wght400_GRAD0_opsz24.svg" alt="Business" class="icon"> Modules
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
               </div>
-              <div class="menu-item">
+              <!-- <div class="menu-item">
                 <li>
                   <a href="business-messages.html" target="iframe_main_business">
                     <img src="../../../assets/mail_FILL0_wght400_GRAD0_opsz48.svg" alt="Messages" class="icon"> Messages
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
-              </div>
-              <div class="menu-item">
+              </div> -->
+              <!-- <div class="menu-item">
                 <li>
                   <a href="notifications.html" target="iframe_main_business">
-                    <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz24.svg" alt="Notifications" class="icon"> Notifications
+                    <img src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz24.svg" alt="Notifications"
+                      class="icon"> Notifications
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
-              </div>
+              </div> -->
               <div class="menu-item">
                 <li>
                   <a href="./business-settings-page.html" target="iframe_main_business">
@@ -83,23 +87,73 @@
               </div>
               <div class="menu-item">
                 <li>
-                  <a href="../../landing-page/landing-page.html">
-                    <img src="../../../assets/logout_FILL0_wght400_GRAD0_opsz48.svg" alt="Sign out" class="icon"> Sign out
+                  <a href="about-us.html" target="iframe_main_business">
+                    <img src="../../../assets/help_FILL0_wght400_GRAD0_opsz24.svg" alt="About Us" class="icon"> About Us
                   </a>
                 </li>
                 <div class="menu-item-separator">&gt;</div>
+              </div>
+              <hr style="opacity: 0.2; padding-bottom: 20px;">
+
+              <div class="menu-item">
+                <li>
+                  <a href="../../landing-page/landing-page.html">
+                    <img src="../../../assets/logout_FILL0_wght400_GRAD0_opsz48.svg" alt="Sign out" class="icon"> Sign
+                    out
+                  </a>
+                </li>
+              </div>
+              <div class="menu-item">
+                <li>
+                  <a onclick="didTapReportBug()" style="cursor: pointer;">
+                    <img src="../../../assets/bug_report_FILL0_wght400_GRAD0_opsz24.svg" alt="Sign out" class="icon">
+                    Report
+                  </a>
+                </li>
+              </div>
+              <div class="menu-item">
+                <li>
+                  <a onclick="didTapContactUs()" style="cursor: pointer;">
+                    <img src="../../../assets/contact_support_FILL0_wght400_GRAD0_opsz24.svg" alt="Sign out"
+                      class="icon"> Contact Us
+                  </a>
+                </li>
               </div>
             </ul>
           </div>
         </nav>
       </div>
-      <section>
-        <div class="column-iframe">
-          <iframe class="iframe-frame" name="iframe_main_business" src="./business-home-page.html"></iframe>
-        </div>
+      <button class="tappable-button" style="text-align: center; padding: 20px;" onclick="didTapContect()">Contact
+        us</button>
     </div>
+    <section>
+      <div class="column-iframe">
+        <iframe class="iframe-frame" name="iframe_main_business" src="./business-home-page.html"></iframe>
+      </div>
     </section>
   </div>
 </body>
 
 </html>
+
+<script>
+  function didTapContactUs() {
+    var email = 'ward.yourline@gmail.com';
+    var subject = 'Contact us';
+    var mailtoLink = 'mailto:' + email + '?subject=' + subject;
+    window.location.href = mailtoLink;
+  }
+
+  function didTapReportBug() {
+    var email = 'ward.yourline@gmail.com';
+    var subject = 'Report bug';
+    var body = `Bug description
+
+Steps to recreate the bug (if possible)
+// Example: Went to Shopping, clicked on store, added drink, went to cart, tapped purchase. Crash/un-expected-result/etc
+`;
+    var mailtoLink = 'mailto:' + email + '?subject=' + subject + '&body=' + encodeURIComponent(body);
+    window.location.href = mailtoLink;
+  }
+
+</script>
