@@ -7,6 +7,11 @@ import YLLegacyPath from '../helper/YLLegacy';
 import { Link } from 'react-router-dom';
 
 function SignInPage() {
+
+    const didTapSignIn = () => {
+        console.log('sign in tapped')
+    }
+
     return (
         <div class="login-div">
             <div>
@@ -35,7 +40,7 @@ function SignInPage() {
                     </div>
 
                     <div class="sign-up">
-                        <Link to="landing" className='sign-in-btn'>Sign in</Link>
+                        <button className='sign-in-btn' onClick={didTapSignIn}>Sign in</button>
                     </div>
 
                     <Separator />
@@ -43,20 +48,6 @@ function SignInPage() {
                     <div class="sign-up">
                         <Link to="signup" >New to YourLine? Sign up here</Link>
                     </div>
-
-                    {/* <button onclick="signInTapped()" class="sign-in-btn">Sign in</button>
-
-            <hr class="rounded" />
-
-            <button class="sign-in-google-btn">
-                <img width="15px" style="margin-bottom: -1px; margin-right: 8px" alt="Google login"
-                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
-                Sign in with Google
-            </button>
-
-            <div class="sign-up">
-                <a href="../signup/signup.html">New to YourLine? Sign up here </a>
-            </div>  */}
                 </div>
             </div>
         </div>
