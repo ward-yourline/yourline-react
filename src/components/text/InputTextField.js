@@ -14,8 +14,8 @@ export const InputTextFieldType = {
 const InputTextField = ({ image, type, placeholder }) => {
 
     return (
-        <div class="input-div">
-            <img class="input-images" src={image} alt="" />
+        <div className="input-div">
+            <img className="input-images" src={image} alt="" />
             <input className="user-input" type={type} placeholder={placeholder} />
         </div>
     );

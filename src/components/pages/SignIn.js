@@ -13,39 +13,39 @@ function SignInPage() {
     }
 
     return (
-        <div class="login-div">
+        <div className="login-div">
             <div>
-                <div class="title">
+                <div>
                     <img className='logo' src="../../assets/yl_vertical_logo.svg" alt="" />
                 </div>
 
                 <Separator />
 
                 <h3>Sign in</h3>
-                <div class="form">
+                <div className="form">
                     <InputTextField image={InputTextFieldImage.person} type={InputTextFieldType.email} placeholder={"Enter email"} />
                     <br />
                     <InputTextField image={InputTextFieldImage.lock} type={InputTextFieldType.password} placeholder={"Enter password"} />
                     <br />
 
-                    <div class="options">
-                        <div class="remember-me">
+                    <div className="options">
+                        <div className="remember-me">
                             <input className="remember-me" type="checkbox" />
-                            <label for="remember-me"> Remember me</label>
+                            <label htmlFor="remember-me"> Remember me</label>
                         </div>
 
-                        <div class="forgot-password">
+                        <div className="forgot-password">
                             <Link to="forgot">Forgot password</Link>
                         </div>
                     </div>
 
-                    <div class="sign-up">
+                    <div className="sign-up">
                         <button className='sign-in-btn' onClick={didTapSignIn}>Sign in</button>
                     </div>
 
                     <Separator />
 
-                    <div class="sign-up">
+                    <div className="sign-up">
                         <Link to="signup" >New to YourLine? Sign up here</Link>
                     </div>
                 </div>
