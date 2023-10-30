@@ -113,6 +113,7 @@ body {
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  text-align: center;
 }
 
 .sign-in-btn:hover {

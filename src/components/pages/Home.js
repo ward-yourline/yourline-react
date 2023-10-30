@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomePage.css'; // Import your styles
+import './Home.css'; // Import your styles
 import Separator from '../layout/Separator';
 import Padding from '../layout/Padding';
 import TextLabel, { TextLabelType, TextLabelAlignment } from '../text/TextLabel';
@@ -29,12 +29,8 @@ const HomePage = () => {
             <div className="section-container">
                 <Padding flex={3} />
                 <div className="button-container">
-                    <button onClick={signInTapped} className="sign-in-btn">
-                        Sign in
-                    </button>
-                    <button onClick={signUpTapped} className="sign-in-btn">
-                        Sign up
-                    </button>
+                    <Link to='signin' className="sign-in-btn">Sign in</Link>
+                    <Link to='signup' className="sign-in-btn">Sign up</Link>
                 </div>
                 <Padding flex={3} />
             </div>
