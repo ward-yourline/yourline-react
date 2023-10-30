@@ -1,0 +1,37 @@
+.input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  padding: 0;
+  margin: 0;
+  height: 50px;
+}
+
+.user-input {
+  font-size: 18px;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+}
+
+.input-images {
+  height: 32px;
+  width: 32px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 5px;
+  opacity: 0.5;
+}
+
+/* Conditions for smaller screens */
+@media (max-width: 600px) {
+    .input-images {
+      display: none;
+    }
+    .user-input {
+        padding-left: 10px;
+    }
+}

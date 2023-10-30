@@ -7,17 +7,6 @@ import { Link } from 'react-router-dom'; // Import Link from React Router
 import YLLegacyPath from '../helper/YLLegacy';
 
 const HomePage = () => {
-
-    const signInTapped = () => {
-        // Implement your navigation logic here, e.g., using React Router.
-        window.location.href = YLLegacyPath("pages/signin/signin.html")
-    };
-
-    const signUpTapped = () => {
-        // Implement your navigation logic here, e.g., using React Router.
-        window.location.href = YLLegacyPath("pages/signup/signup.html")
-    };
-
     return (
         <div>
             <div className="logo-container">
