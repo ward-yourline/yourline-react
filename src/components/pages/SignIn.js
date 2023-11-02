@@ -44,7 +44,7 @@ const SignInPage = () => {
             .then((data) => {
                 setApiResponse(data);
 
-                if (data.data.signIn) {
+                if (data && data.data.signIn) {
                     const { accessToken, id, refreshToken } = data.data.signIn;
                     console.log(id, accessToken, refreshToken)
                     didSignInUser(id, accessToken, refreshToken)
