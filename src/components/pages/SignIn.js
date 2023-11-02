@@ -83,9 +83,9 @@ const SignInPage = () => {
     return (
         <div className="login-div">
             <div>
-                <div>
-                    <img className='logo' src="../../assets/yl_vertical_logo.svg" alt="" />
-                </div>
+            <div className="logo-container">
+                <img className="logo" src="assets/yl_vertical_logo.svg" alt="YourLine Logo" />
+            </div>
 
                 <Separator />
 
