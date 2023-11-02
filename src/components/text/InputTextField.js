@@ -11,12 +11,14 @@ export const InputTextFieldType = {
     password: "password"
 }
 
-const InputTextField = ({ image, type, placeholder }) => {
+const InputTextField = ({ image, type, placeholder, id }) => {
 
+    const concactenatedID = "user-input" + " " + id
+    
     return (
         <div className="input-div">
             <img className="input-images" src={image} alt="" />
-            <input className="user-input" type={type} placeholder={placeholder} />
+            <input className={concactenatedID} type={type} placeholder={placeholder} />
         </div>
     );
 }
