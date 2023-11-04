@@ -2,6 +2,19 @@
   padding-left: 20px;
 }
 
+.mobile-warning {
+  display: none;
+  position: fixed;
+  background-color: white;
+  padding: 20px;
+  margin: 0px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
 /* Create three equal columns that floats next to each other */
 .column-nav {
   position: fixed;
@@ -74,4 +87,14 @@
 
 .icon {
   width: 24px; height: 24px; vertical-align: middle; margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  .mobile-warning {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: start;
+    align-items: center;
+  }
 }
