@@ -3,12 +3,18 @@ import './InputTextField.css';
 
 export const InputTextFieldImage = {
     person: "../../assets/person_FILL0_wght400_GRAD0_opsz48.svg",
-    lock: "../../assets/lock_FILL0_wght400_GRAD0_opsz48.svg"
+    lock: "../../assets/lock_FILL0_wght400_GRAD0_opsz48.svg",
+    mail: "../../assets/mail_FILL0_wght400_GRAD0_opsz48.svg",
+    lock: "../../assets/lock_FILL0_wght400_GRAD0_opsz48.svg",
+    home: "../../assets/home_FILL0_wght400_GRAD0_opsz48.svg",
+    phone: "../../assets/smartphone_FILL0_wght400_GRAD0_opsz48.svg"
 }
 
 export const InputTextFieldType = {
     email: "email",
-    password: "password"
+    password: "password",
+    number: "number",
+    text: "text"
 }
 
 const InputTextField = ({ image, type, placeholder, id }) => {

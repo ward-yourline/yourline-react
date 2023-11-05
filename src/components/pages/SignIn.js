@@ -5,6 +5,7 @@ import InputTextField, { InputTextFieldImage, InputTextFieldType } from '../text
 import { Link, useNavigate } from 'react-router-dom'; // Import useHistory
 import { storeUser } from '../../dataService/DataService';
 import { validateEmail } from '../../utilities/utilities'
+import "./SignIn.css";
 
 const SignInPage = () => {
     const [apiResponse, setApiResponse] = useState(null);
